@@ -111,5 +111,8 @@ int main() {
 
     delete mySportsCar;    
 
+    //if we need to change the value of private attribute we can use getters and setters
+    // sometime we need to change the value of private members
+    mySportsCar->setTyreCompany("CEAT");
     return 0;
 }
