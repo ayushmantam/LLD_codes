@@ -1,0 +1,86 @@
+This image represents an example of **composition in C++** using **pointers**. Let's break it down step-by-step to understand what’s happening:
+
+---
+
+### 🧱 **Code Structure (Simplified):**
+
+#### 1. **Class A**
+
+```cpp
+class A {
+    void method1();
+};
+```
+
+Class `A` has a method called `method1()`.
+
+---
+
+#### 2. **Class B**
+
+```cpp
+class B {
+    A* a;
+
+    B() {
+        a = new A();
+    }
+
+    void method2();
+};
+```
+
+* `B` **contains a pointer** to an object of class `A`.
+* In the constructor of `B`, memory for `A` is dynamically allocated (`a = new A();`).
+* So, **class `B` "has-a" class `A`**, which is a form of **composition**.
+
+---
+
+#### 3. **main() function**
+
+```cpp
+int main() {
+    B* b = new B();        // Create an object of class B
+    b->method2();          // Call B's method
+
+    b->a->method1();       // Access class A's method through B's object
+}
+```
+
+---
+
+### 🧠 **Concepts Represented:**
+
+| Concept                       | Description                                                                             |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
+| **Composition**               | Class `B` contains a pointer to an instance of `A` (has-a relationship)                 |
+| **Dynamic Allocation**        | `new A()` is used inside the constructor of `B` to allocate `A`                         |
+| **Accessing Composed Object** | You can access `A`'s method from `B`'s pointer: `b->a->method1()`                       |
+| **Pointer-Based Composition** | This version uses pointers, unlike earlier value-based composition (stronger ownership) |
+
+---
+
+### ⚠️ Note:
+
+This example is technically **composition**, but since it uses `new`, it:
+
+* requires manual `delete` to prevent memory leaks.
+* behaves more like **aggregation** unless managed carefully (e.g., smart pointers, destructors).
+
+---
+
+### ✅ Recommendation:
+
+To make this **pure composition**, you'd ideally use:
+
+```cpp
+class B {
+    A a;  // direct member object, not pointer
+};
+```
+
+But the pointer version is still valid if you need **dynamic behavior or late binding**.
+
+---
+
+Let me know if you want this rewritten using `smart pointers` or converted into UML diagram!
