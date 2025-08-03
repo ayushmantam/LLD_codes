@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// Simple factory : a factory that decides which concrete class to instantiate
 
 
 class Burger {
