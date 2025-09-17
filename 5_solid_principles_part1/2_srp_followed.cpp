@@ -6,6 +6,11 @@ S: Single Responsibility Principle:
 A class should have only one reason to change.
 
 A class should do only one thing.
+
+// Why?
+// - Makes code easier to understand, maintain, and test.
+// - Avoids classes becoming "God objects" (doing too many things).
+// - Improves reusability and flexibility.
 */
 using namespace std;
 
