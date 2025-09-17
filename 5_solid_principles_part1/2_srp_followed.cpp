@@ -1,6 +1,12 @@
 #include <iostream>
 #include <vector>
 
+/*
+S: Single Responsibility Principle:
+A class should have only one reason to change.
+
+A class should do only one thing.
+*/
 using namespace std;
 
 // Product class representing any item in eCommerce.
