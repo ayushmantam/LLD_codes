@@ -1,6 +1,45 @@
 #include <iostream>
 #include <vector>
 
+/*
+S: Single Responsibility Principle:
+A class should have only one reason to change.
+
+A class should do only one thing.
+
+// Why?
+// - Makes code easier to understand, maintain, and test.
+// - Avoids classes becoming "God objects" (doing too many things).
+// - Improves reusability and flexibility.
+*/
+
+/*
+// 🔹 Misunderstandings about SRP (Single Responsibility Principle)
+
+// Many people misunderstand SRP as:
+// "A class should only do ONE thing"
+// ❌ This is NOT fully correct.
+
+// ✅ Correct Meaning:
+// SRP = A class should have only ONE REASON TO CHANGE.
+
+// Explanation:
+// - A class may perform multiple operations, 
+//   but if they all change for the SAME reason, it's fine.
+// - Example: An "Invoice" class may calculateTotal(), addItem(), removeItem().
+//   These are different operations, but they all belong to ONE responsibility: "Invoice management".
+
+// Common Misunderstandings:
+// 1. "SRP means one method per class" → ❌ Wrong.
+// 2. "SRP means class should be very small" → ❌ Wrong.
+// 3. "SRP means class should only do one operation" → ❌ Wrong.
+
+// ✅ Correct View:
+// - SRP is about **responsibility**, not size or number of methods.
+// - Responsibility = reason to change.
+// - If a class has multiple unrelated reasons to change → it violates SRP.
+
+*/
 using namespace std;
 
 // Product class representing any item in eCommerce.
