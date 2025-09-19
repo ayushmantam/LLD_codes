@@ -4,7 +4,7 @@ using namespace std;
 
 class Singleton {
 private:
-    static Singleton* instance;
+    static Singleton* instance; // this varible will hold our single object
 
     Singleton() {
         cout << "Singleton Constructor called" << endl;
