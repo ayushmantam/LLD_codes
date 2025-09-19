@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+
+// -----   Favour Composition over Inheritence -------------
+
 // --- Strategy Interface for Walk ---
 class WalkableRobot {
 public:
